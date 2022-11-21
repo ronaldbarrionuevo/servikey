@@ -18,7 +18,7 @@ defineProps({
                     <template #content>
                         <p>{{clientes.descripcion_cliente}}</p>
                         <p>{{clientes.telefono}}</p>
-                        <Link :href="route('Cliente.index')" as="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-5 p-5 ">volver</Link>
+                        <Link :href="route('Cliente.index')" as="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full ">volver</Link>
                     </template>
                 </ActionSection>
             </div>
