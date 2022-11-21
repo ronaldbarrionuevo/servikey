@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cliente;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -14,7 +15,10 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Cliente/Index');
+        $Cliente = Cliente::all();
+        return Inertia::render('Cliente/Index',[
+            'clientes' => $Cliente,
+        ]);
     }
 
     /**

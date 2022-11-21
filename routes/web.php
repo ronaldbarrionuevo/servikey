@@ -4,6 +4,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\ClienteController;
+use App\Models\Cliente;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,5 +35,5 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
-    Route::get('/Cliente',[ClienteController::class,'index']);
+    Route::resource('Cliente',ClienteController::class);
 });
