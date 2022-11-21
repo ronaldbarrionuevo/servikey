@@ -39,7 +39,7 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -50,7 +50,10 @@ class ClienteController extends Controller
      */
     public function show($id)
     {
-        //
+        $Cliente = Cliente::find($id);
+        return Inertia::render('Cliente/Show',[
+            'clientes'=>$Cliente
+        ]);
     }
 
     /**
